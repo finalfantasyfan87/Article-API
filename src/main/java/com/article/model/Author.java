@@ -25,7 +25,7 @@ public class Author {
 
 	String race;
 	
-	@Column(name="article_idsss")
+	@Column(name="article_id")
 	long articleId;
 
 	public long getAuthorId() {
