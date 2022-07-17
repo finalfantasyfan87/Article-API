@@ -3,6 +3,9 @@ package com.article.model;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.Table;
 import org.springframework.data.annotation.Id;
@@ -24,7 +27,7 @@ public class Author {
 	String gender;
 
 	String race;
-	
+	@OneToOne(mappedBy="author")
 	@Column(name="article_id")
 	long articleId;
 
